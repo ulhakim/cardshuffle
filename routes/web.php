@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\PostController;
 
 
 /*
@@ -14,5 +15,5 @@ use App\Http\Controllers\CardController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [CardController::class, 'index']);
-
+Route::match(['get', 'post'], '/', [CardController::class, 'index']);
+// Route::match(array('GET', 'POST'), '/', function()
