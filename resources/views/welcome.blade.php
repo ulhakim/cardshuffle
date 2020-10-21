@@ -35,7 +35,7 @@
                      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
                      Number of Players
                      </label>
-                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="playernumber" name="playernumber" type="text" placeholder="How many players ?" @if(!empty($players)) value="{{ count($players) }}" @endif>
+                     <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="playernumber" name="playernumber" type="text" placeholder="How many players ?" @if(!empty($playernum)) value="{{ $playernum }}" @endif>
                       @if ($errors->any())
                       @foreach ($errors->all() as $error)
                           <p class="text-red-500 text-xs italic">{{ $error }}</p>
